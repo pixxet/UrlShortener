@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Mremi\UrlShortener library.
+ * This file is part of the Pixxet\UrlShortener library.
  *
  * (c) Rémi Marseille <marseille.remi@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Mremi\UrlShortener\Model;
+namespace Pixxet\UrlShortener\Model;
 
-use Mremi\UrlShortener\Provider\ChainProvider;
+use Pixxet\UrlShortener\Provider\ChainProvider;
 
 /**
  * Link manager class.
@@ -36,7 +36,7 @@ class LinkManager implements LinkManagerInterface
      * @param ChainProvider $chainProvider A chain provider instance
      * @param string        $class         The Link class namespace, optional
      */
-    public function __construct(ChainProvider $chainProvider, $class = 'Mremi\UrlShortener\Model\Link')
+    public function __construct(ChainProvider $chainProvider, $class = 'Pixxet\UrlShortener\Model\Link')
     {
         $this->chainProvider = $chainProvider;
         $this->class         = $class;

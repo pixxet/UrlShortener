@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Mremi\UrlShortener library.
+ * This file is part of the Pixxet\UrlShortener library.
  *
  * (c) Rémi Marseille <marseille.remi@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Mremi\UrlShortener\Tests\Model;
+namespace Pixxet\UrlShortener\Tests\Model;
 
-use Mremi\UrlShortener\Model\Link;
+use Pixxet\UrlShortener\Model\Link;
 
 /**
  * Tests Link class.

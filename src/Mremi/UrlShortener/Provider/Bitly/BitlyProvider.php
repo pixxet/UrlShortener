@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Mremi\UrlShortener library.
+ * This file is part of the Pixxet\UrlShortener library.
  *
  * (c) Rémi Marseille <marseille.remi@gmail.com>
  *
@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Mremi\UrlShortener\Provider\Bitly;
+namespace Pixxet\UrlShortener\Provider\Bitly;
 
 use GuzzleHttp\Client;
-use Mremi\UrlShortener\Exception\InvalidApiResponseException;
-use Mremi\UrlShortener\Model\LinkInterface;
-use Mremi\UrlShortener\Provider\UrlShortenerProviderInterface;
+use Pixxet\UrlShortener\Exception\InvalidApiResponseException;
+use Pixxet\UrlShortener\Model\LinkInterface;
+use Pixxet\UrlShortener\Provider\UrlShortenerProviderInterface;
 
 /**
  * Bit.ly provider class.

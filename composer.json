@@ -1,9 +1,9 @@
 {
-    "name": "mremi/url-shortener",
+    "name": "pixxet/url-shortener",
     "type": "library",
     "description": "A PHP5 library using API to shorten/expand URL",
     "keywords": ["url", "shortener", "api"],
-    "homepage": "https://github.com/mremi/UrlShortener",
+    "homepage": "https://github.com/pixxet/UrlShortener",
     "license": "MIT",
     "authors": [
         {
@@ -23,12 +23,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Mremi\\UrlShortener\\": "src/Mremi/UrlShortener"
+            "Pixxet\\UrlShortener\\": "src/Pixxet/UrlShortener"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Mremi\\UrlShortener\\Tests\\": "tests/Mremi/UrlShortener/Tests"
+            "Pixxet\\UrlShortener\\Tests\\": "tests/Pixxet/UrlShortener/Tests"
         }
     }
 }

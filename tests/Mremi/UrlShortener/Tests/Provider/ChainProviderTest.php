@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Mremi\UrlShortener library.
+ * This file is part of the Pixxet\UrlShortener library.
  *
  * (c) Rémi Marseille <marseille.remi@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Mremi\UrlShortener\Tests\Provider;
+namespace Pixxet\UrlShortener\Tests\Provider;
 
-use Mremi\UrlShortener\Provider\ChainProvider;
+use Pixxet\UrlShortener\Provider\ChainProvider;
 
 /**
  * Tests ChainProvider class.
@@ -39,7 +39,7 @@ class ChainProviderTest extends \PHPUnit_Framework_TestCase
     {
         $chainProvider = new ChainProvider();
 
-        $bitlyProvider = $this->getMockBuilder('Mremi\UrlShortener\Provider\Bitly\BitlyProvider')
+        $bitlyProvider = $this->getMockBuilder('Pixxet\UrlShortener\Provider\Bitly\BitlyProvider')
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -55,7 +55,7 @@ class ChainProviderTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($chainProvider->hasProvider('bitly'));
         $this->assertCount(1, $chainProvider->getProviders());
 
-        $googleProvider = $this->getMockBuilder('Mremi\UrlShortener\Provider\Google\GoogleProvider')
+        $googleProvider = $this->getMockBuilder('Pixxet\UrlShortener\Provider\Google\GoogleProvider')
             ->disableOriginalConstructor()
             ->getMock();
 

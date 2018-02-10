@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Mremi\UrlShortener library.
+ * This file is part of the Pixxet\UrlShortener library.
  *
  * (c) Rémi Marseille <marseille.remi@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Mremi\UrlShortener\Tests\Provider\Google;
+namespace Pixxet\UrlShortener\Tests\Provider\Google;
 
-use Mremi\UrlShortener\Provider\Google\GoogleProvider;
+use Pixxet\UrlShortener\Provider\Google\GoogleProvider;
 
 /**
  * Tests GoogleProvider class.
@@ -84,7 +84,7 @@ class GoogleProviderTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests the shorten method throws exception if Google returns a string.
      *
-     * @expectedException        \Mremi\UrlShortener\Exception\InvalidApiResponseException
+     * @expectedException        \Pixxet\UrlShortener\Exception\InvalidApiResponseException
      * @expectedExceptionMessage Google response is probably mal-formed because cannot be json-decoded.
      */
     public function testShortenThrowsExceptionIfResponseApiIsString()
@@ -97,7 +97,7 @@ class GoogleProviderTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests the shorten method throws exception if Google returns an error response.
      *
-     * @expectedException        \Mremi\UrlShortener\Exception\InvalidApiResponseException
+     * @expectedException        \Pixxet\UrlShortener\Exception\InvalidApiResponseException
      * @expectedExceptionMessage Google returned status code "400" with message "Required"
      */
     public function testShortenThrowsExceptionIfApiResponseIsError()
@@ -110,7 +110,7 @@ class GoogleProviderTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests the shorten method throws exception if Google returns a response with no id.
      *
-     * @expectedException        \Mremi\UrlShortener\Exception\InvalidApiResponseException
+     * @expectedException        \Pixxet\UrlShortener\Exception\InvalidApiResponseException
      * @expectedExceptionMessage Property "id" does not exist within Google response.
      */
     public function testShortenThrowsExceptionIfApiResponseHasNoId()
@@ -123,7 +123,7 @@ class GoogleProviderTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests the shorten method throws exception if Google returns a response with no longUrl.
      *
-     * @expectedException        \Mremi\UrlShortener\Exception\InvalidApiResponseException
+     * @expectedException        \Pixxet\UrlShortener\Exception\InvalidApiResponseException
      * @expectedExceptionMessage Property "longUrl" does not exist within Google response.
      */
     public function testShortenThrowsExceptionIfApiResponseHasNoLongUrl()
@@ -173,7 +173,7 @@ JSON;
     /**
      * Tests the expand method throws exception if Google returns a string.
      *
-     * @expectedException        \Mremi\UrlShortener\Exception\InvalidApiResponseException
+     * @expectedException        \Pixxet\UrlShortener\Exception\InvalidApiResponseException
      * @expectedExceptionMessage Google response is probably mal-formed because cannot be json-decoded.
      */
     public function testExpandThrowsExceptionIfResponseApiIsString()
@@ -186,7 +186,7 @@ JSON;
     /**
      * Tests the expand method throws exception if Google returns an error response.
      *
-     * @expectedException        \Mremi\UrlShortener\Exception\InvalidApiResponseException
+     * @expectedException        \Pixxet\UrlShortener\Exception\InvalidApiResponseException
      * @expectedExceptionMessage Google returned status code "400" with message "Required"
      */
     public function testExpandThrowsExceptionIfApiResponseIsError()
@@ -199,7 +199,7 @@ JSON;
     /**
      * Tests the expand method throws exception if Google returns a response with no id.
      *
-     * @expectedException        \Mremi\UrlShortener\Exception\InvalidApiResponseException
+     * @expectedException        \Pixxet\UrlShortener\Exception\InvalidApiResponseException
      * @expectedExceptionMessage Property "id" does not exist within Google response.
      */
     public function testExpandThrowsExceptionIfApiResponseHasNoId()
@@ -212,7 +212,7 @@ JSON;
     /**
      * Tests the expand method throws exception if Google returns a response with no longUrl.
      *
-     * @expectedException        \Mremi\UrlShortener\Exception\InvalidApiResponseException
+     * @expectedException        \Pixxet\UrlShortener\Exception\InvalidApiResponseException
      * @expectedExceptionMessage Property "longUrl" does not exist within Google response.
      */
     public function testExpandThrowsExceptionIfApiResponseHasNoLongUrl()
@@ -225,7 +225,7 @@ JSON;
     /**
      * Tests the expand method throws exception if Google returns a response with no status.
      *
-     * @expectedException        \Mremi\UrlShortener\Exception\InvalidApiResponseException
+     * @expectedException        \Pixxet\UrlShortener\Exception\InvalidApiResponseException
      * @expectedExceptionMessage Property "status" does not exist within Google response.
      */
     public function testExpandThrowsExceptionIfApiResponseHasNoStatus()
@@ -259,7 +259,7 @@ JSON;
     /**
      * Tests the expand method throws exception if Google returns an invalid status code.
      *
-     * @expectedException        \Mremi\UrlShortener\Exception\InvalidApiResponseException
+     * @expectedException        \Pixxet\UrlShortener\Exception\InvalidApiResponseException
      * @expectedExceptionMessage Google returned status code "KO".
      */
     public function testExpandThrowsExceptionIfApiResponseHasInvalidStatusCode()
@@ -334,7 +334,7 @@ JSON;
      */
     protected function setUp()
     {
-        $this->provider = $this->getMockBuilder('Mremi\UrlShortener\Provider\Google\GoogleProvider')
+        $this->provider = $this->getMockBuilder('Pixxet\UrlShortener\Provider\Google\GoogleProvider')
             ->setMethods(array('createClient'))
             ->getMock();
     }
@@ -520,7 +520,7 @@ JSON;
      */
     private function getBaseMockLink()
     {
-        return $this->getMock('Mremi\UrlShortener\Model\LinkInterface');
+        return $this->getMock('Pixxet\UrlShortener\Model\LinkInterface');
     }
 
     /**

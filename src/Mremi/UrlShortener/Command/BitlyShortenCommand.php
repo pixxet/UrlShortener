@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Mremi\UrlShortener library.
+ * This file is part of the Pixxet\UrlShortener library.
  *
  * (c) Rémi Marseille <marseille.remi@gmail.com>
  *
@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Mremi\UrlShortener\Command;
+namespace Pixxet\UrlShortener\Command;
 
-use Mremi\UrlShortener\Model\Link;
-use Mremi\UrlShortener\Provider\Bitly\BitlyProvider;
-use Mremi\UrlShortener\Provider\Bitly\OAuthClient;
+use Pixxet\UrlShortener\Model\Link;
+use Pixxet\UrlShortener\Provider\Bitly\BitlyProvider;
+use Pixxet\UrlShortener\Provider\Bitly\OAuthClient;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;

@@ -55,9 +55,9 @@ Composer will install the library to your project's `vendor/mremi` directory.
 ```php
 <?php
 
-use Mremi\UrlShortener\Model\Link;
-use Mremi\UrlShortener\Provider\Bitly\BitlyProvider;
-use Mremi\UrlShortener\Provider\Bitly\OAuthClient;
+use Pixxet\UrlShortener\Model\Link;
+use Pixxet\UrlShortener\Provider\Bitly\BitlyProvider;
+use Pixxet\UrlShortener\Provider\Bitly\OAuthClient;
 
 $link = new Link;
 $link->setLongUrl('http://www.google.com');
@@ -93,9 +93,9 @@ $ bin/shortener bitly:shorten username password http://www.google.com --options=
 ```php
 <?php
 
-use Mremi\UrlShortener\Model\Link;
-use Mremi\UrlShortener\Provider\Bitly\BitlyProvider;
-use Mremi\UrlShortener\Provider\Bitly\OAuthClient;
+use Pixxet\UrlShortener\Model\Link;
+use Pixxet\UrlShortener\Provider\Bitly\BitlyProvider;
+use Pixxet\UrlShortener\Provider\Bitly\OAuthClient;
 
 $link = new Link;
 $link->setShortUrl('http://goo.gl/fbsS');
@@ -133,8 +133,8 @@ $ bin/shortener bitly:expand username password http://bit.ly/ze6poY --options='{
 ```php
 <?php
 
-use Mremi\UrlShortener\Model\Link;
-use Mremi\UrlShortener\Provider\Google\GoogleProvider;
+use Pixxet\UrlShortener\Model\Link;
+use Pixxet\UrlShortener\Provider\Google\GoogleProvider;
 
 $link = new Link;
 $link->setLongUrl('http://www.google.com');
@@ -175,8 +175,8 @@ $ bin/shortener google:shorten http://www.google.com --options='{"connect_timeou
 ```php
 <?php
 
-use Mremi\UrlShortener\Model\Link;
-use Mremi\UrlShortener\Provider\Google\GoogleProvider;
+use Pixxet\UrlShortener\Model\Link;
+use Pixxet\UrlShortener\Provider\Google\GoogleProvider;
 
 $link = new Link;
 $link->setShortUrl('http://goo.gl/fbsS');
@@ -217,8 +217,8 @@ $ bin/shortener google:expand http://goo.gl/fbsS --options='{"connect_timeout":1
 ```php
 <?php
 
-use Mremi\UrlShortener\Model\Link;
-use Mremi\UrlShortener\Provider\ChainProvider;
+use Pixxet\UrlShortener\Model\Link;
+use Pixxet\UrlShortener\Provider\ChainProvider;
 
 $chainProvider = new ChainProvider;
 $chainProvider->addProvider($bitlyProvider);
@@ -242,7 +242,7 @@ You can retrieve some links using these finders:
 ```php
 <?php
 
-use Mremi\UrlShortener\Model\LinkManager;
+use Pixxet\UrlShortener\Model\LinkManager;
 
 $linkManager = new LinkManager($chainProvider);
 

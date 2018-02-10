@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Mremi\UrlShortener library.
+ * This file is part of the Pixxet\UrlShortener library.
  *
  * (c) Rémi Marseille <marseille.remi@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Mremi\UrlShortener\Tests\Model;
+namespace Pixxet\UrlShortener\Tests\Model;
 
-use Mremi\UrlShortener\Model\LinkManager;
+use Pixxet\UrlShortener\Model\LinkManager;
 
 /**
  * Tests Link manager class.
@@ -35,7 +35,7 @@ class LinkManagerTest extends \PHPUnit_Framework_TestCase
      */
     public function testFindOneByProviderAndShortUrl()
     {
-        $provider = $this->getMock('Mremi\UrlShortener\Provider\UrlShortenerProviderInterface');
+        $provider = $this->getMock('Pixxet\UrlShortener\Provider\UrlShortenerProviderInterface');
 
         $provider
             ->expects($this->once())
@@ -54,7 +54,7 @@ class LinkManagerTest extends \PHPUnit_Framework_TestCase
 
         $link = $this->manager->findOneByProviderAndShortUrl('bitly', 'http://bit.ly/ZGUlzK');
 
-        $this->assertInstanceOf('Mremi\UrlShortener\Model\Link', $link);
+        $this->assertInstanceOf('Pixxet\UrlShortener\Model\Link', $link);
         $this->assertSame('http://bit.ly/ZGUlzK', $link->getShortUrl());
     }
 
@@ -63,7 +63,7 @@ class LinkManagerTest extends \PHPUnit_Framework_TestCase
      */
     public function testFindOneByProviderAndLongUrl()
     {
-        $provider = $this->getMock('Mremi\UrlShortener\Provider\UrlShortenerProviderInterface');
+        $provider = $this->getMock('Pixxet\UrlShortener\Provider\UrlShortenerProviderInterface');
 
         $provider
             ->expects($this->once())
@@ -82,7 +82,7 @@ class LinkManagerTest extends \PHPUnit_Framework_TestCase
 
         $link = $this->manager->findOneByProviderAndLongUrl('google', 'http://www.google.com/');
 
-        $this->assertInstanceOf('Mremi\UrlShortener\Model\Link', $link);
+        $this->assertInstanceOf('Pixxet\UrlShortener\Model\Link', $link);
         $this->assertSame('http://www.google.com/', $link->getLongUrl());
     }
 
@@ -91,10 +91,10 @@ class LinkManagerTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->chainProvider = $this->getMockBuilder('Mremi\UrlShortener\Provider\ChainProvider')
+        $this->chainProvider = $this->getMockBuilder('Pixxet\UrlShortener\Provider\ChainProvider')
             ->disableOriginalConstructor()
             ->getMock();
 
-        $this->manager = new LinkManager($this->chainProvider, 'Mremi\UrlShortener\Model\Link');
+        $this->manager = new LinkManager($this->chainProvider, 'Pixxet\UrlShortener\Model\Link');
     }
 }

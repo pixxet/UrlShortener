@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Mremi\UrlShortener library.
+ * This file is part of the Pixxet\UrlShortener library.
  *
  * (c) Rémi Marseille <marseille.remi@gmail.com>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Mremi\UrlShortener\Tests\Provider\Bitly;
+namespace Pixxet\UrlShortener\Tests\Provider\Bitly;
 
-use Mremi\UrlShortener\Provider\Bitly\BitlyProvider;
+use Pixxet\UrlShortener\Provider\Bitly\BitlyProvider;
 
 /**
  * Tests BitlyProvider class.
@@ -28,7 +28,7 @@ class BitlyProviderTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests the shorten method throws exception if Bit.ly returns a string.
      *
-     * @expectedException        \Mremi\UrlShortener\Exception\InvalidApiResponseException
+     * @expectedException        \Pixxet\UrlShortener\Exception\InvalidApiResponseException
      * @expectedExceptionMessage Bit.ly response is probably mal-formed because cannot be json-decoded.
      */
     public function testShortenThrowsExceptionIfApiResponseIsString()
@@ -41,7 +41,7 @@ class BitlyProviderTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests the shorten method throws exception if Bit.ly returns a response with no status_code.
      *
-     * @expectedException        \Mremi\UrlShortener\Exception\InvalidApiResponseException
+     * @expectedException        \Pixxet\UrlShortener\Exception\InvalidApiResponseException
      * @expectedExceptionMessage Property "status_code" does not exist within Bit.ly response.
      */
     public function testShortenThrowsExceptionIfApiResponseHasNoStatusCode()
@@ -54,7 +54,7 @@ class BitlyProviderTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests the shorten method throws exception if Bit.ly returns an invalid status code.
      *
-     * @expectedException        \Mremi\UrlShortener\Exception\InvalidApiResponseException
+     * @expectedException        \Pixxet\UrlShortener\Exception\InvalidApiResponseException
      * @expectedExceptionMessage Bit.ly returned status code "500" with message "KO"
      */
     public function testShortenThrowsExceptionIfApiResponseHasInvalidStatusCode()
@@ -110,7 +110,7 @@ JSON;
     /**
      * Tests the expand method throws exception if Bit.ly returns a string.
      *
-     * @expectedException        \Mremi\UrlShortener\Exception\InvalidApiResponseException
+     * @expectedException        \Pixxet\UrlShortener\Exception\InvalidApiResponseException
      * @expectedExceptionMessage Bit.ly response is probably mal-formed because cannot be json-decoded.
      */
     public function testExpandThrowsExceptionIfApiResponseIsString()
@@ -123,7 +123,7 @@ JSON;
     /**
      * Tests the expand method throws exception if Bit.ly returns a response with no status_code.
      *
-     * @expectedException        \Mremi\UrlShortener\Exception\InvalidApiResponseException
+     * @expectedException        \Pixxet\UrlShortener\Exception\InvalidApiResponseException
      * @expectedExceptionMessage Property "status_code" does not exist within Bit.ly response.
      */
     public function testExpandThrowsExceptionIfApiResponseHasNoStatusCode()
@@ -136,7 +136,7 @@ JSON;
     /**
      * Tests the expand method throws exception if Bit.ly returns an invalid status code.
      *
-     * @expectedException        \Mremi\UrlShortener\Exception\InvalidApiResponseException
+     * @expectedException        \Pixxet\UrlShortener\Exception\InvalidApiResponseException
      * @expectedExceptionMessage Bit.ly returned status code "500" with message "KO"
      */
     public function testExpandThrowsExceptionIfApiResponseHasInvalidStatusCode()
@@ -197,9 +197,9 @@ JSON;
      */
     protected function setUp()
     {
-        $auth = $this->getMock('Mremi\UrlShortener\Provider\Bitly\AuthenticationInterface');
+        $auth = $this->getMock('Pixxet\UrlShortener\Provider\Bitly\AuthenticationInterface');
 
-        $this->provider = $this->getMockBuilder('Mremi\UrlShortener\Provider\Bitly\BitlyProvider')
+        $this->provider = $this->getMockBuilder('Pixxet\UrlShortener\Provider\Bitly\BitlyProvider')
             ->setConstructorArgs(array($auth))
             ->setMethods(array('createClient'))
             ->getMock();
@@ -356,7 +356,7 @@ JSON;
      */
     private function getBaseMockLink()
     {
-        return $this->getMock('Mremi\UrlShortener\Model\LinkInterface');
+        return $this->getMock('Pixxet\UrlShortener\Model\LinkInterface');
     }
 
     /**
