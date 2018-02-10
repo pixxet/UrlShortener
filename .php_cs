@@ -1,7 +1,7 @@
 <?php
 
 $header = <<<EOF
-This file is part of the Mremi\UrlShortener library.
+This file is part of the Pixxet\UrlShortener library.
 
 (c) Rémi Marseille <marseille.remi@gmail.com>
 

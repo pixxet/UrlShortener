@@ -5,11 +5,11 @@ This library allows you to shorten a URL, reverse is also possible.
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/c4e06c9d-547c-47bb-8abb-fccc68b7df7a/big.png)](https://insight.sensiolabs.com/projects/c4e06c9d-547c-47bb-8abb-fccc68b7df7a)
 
-[![Build Status](https://api.travis-ci.org/mremi/UrlShortener.png?branch=master)](https://travis-ci.org/mremi/UrlShortener)
-[![Total Downloads](https://poser.pugx.org/mremi/url-shortener/downloads.png)](https://packagist.org/packages/mremi/url-shortener)
-[![Latest Stable Version](https://poser.pugx.org/mremi/url-shortener/v/stable.png)](https://packagist.org/packages/mremi/url-shortener)
-[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/mremi/UrlShortener/badges/quality-score.png?s=34c4ba6b0cd272673fa121c32a63e1ce668b9b2a)](https://scrutinizer-ci.com/g/mremi/UrlShortener/)
-[![Code Coverage](https://scrutinizer-ci.com/g/mremi/UrlShortener/badges/coverage.png?s=7a8c3388ae7b50f35fd548b4b7874526c634e8c5)](https://scrutinizer-ci.com/g/mremi/UrlShortener/)
+[![Build Status](https://api.travis-ci.org/pixxet/UrlShortener.png?branch=master)](https://travis-ci.org/pixxet/UrlShortener)
+[![Total Downloads](https://poser.pugx.org/pixxet/url-shortener/downloads.png)](https://packagist.org/packages/pixxet/url-shortener)
+[![Latest Stable Version](https://poser.pugx.org/pixxet/url-shortener/v/stable.png)](https://packagist.org/packages/pixxet/url-shortener)
+[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/pixxet/UrlShortener/badges/quality-score.png?s=34c4ba6b0cd272673fa121c32a63e1ce668b9b2a)](https://scrutinizer-ci.com/g/pixxet/UrlShortener/)
+[![Code Coverage](https://scrutinizer-ci.com/g/pixxet/UrlShortener/badges/coverage.png?s=7a8c3388ae7b50f35fd548b4b7874526c634e8c5)](https://scrutinizer-ci.com/g/pixxet/UrlShortener/)
 
 **Basic Docs**
 
@@ -33,7 +33,7 @@ Add UrlShortener in your composer.json:
 ```js
 {
     "require": {
-        "mremi/url-shortener": "dev-master"
+        "pixxet/url-shortener": "dev-master"
     }
 }
 ```
@@ -41,10 +41,10 @@ Add UrlShortener in your composer.json:
 Now tell composer to download the library by running the command:
 
 ``` bash
-$ php composer.phar update mremi/url-shortener
+$ php composer.phar update pixxet/url-shortener
 ```
 
-Composer will install the library to your project's `vendor/mremi` directory.
+Composer will install the library to your project's `vendor/pixxet` directory.
 
 <a name="bitly-api"></a>
 
@@ -262,4 +262,4 @@ A feature is missing here? Feel free to create a pull request to solve it!
 I hope this has been useful and has helped you. If so, share it and recommend
 it! :)
 
-[@mremitsme](https://twitter.com/mremitsme)
+[@pixxettsme](https://twitter.com/pixxettsme)
