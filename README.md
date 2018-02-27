@@ -8,8 +8,6 @@ This library allows you to shorten a URL, reverse is also possible.
 [![Build Status](https://api.travis-ci.org/pixxet/UrlShortener.png?branch=master)](https://travis-ci.org/pixxet/UrlShortener)
 [![Total Downloads](https://poser.pugx.org/pixxet/url-shortener/downloads.png)](https://packagist.org/packages/pixxet/url-shortener)
 [![Latest Stable Version](https://poser.pugx.org/pixxet/url-shortener/v/stable.png)](https://packagist.org/packages/pixxet/url-shortener)
-[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/pixxet/UrlShortener/badges/quality-score.png?s=34c4ba6b0cd272673fa121c32a63e1ce668b9b2a)](https://scrutinizer-ci.com/g/pixxet/UrlShortener/)
-[![Code Coverage](https://scrutinizer-ci.com/g/pixxet/UrlShortener/badges/coverage.png?s=7a8c3388ae7b50f35fd548b4b7874526c634e8c5)](https://scrutinizer-ci.com/g/pixxet/UrlShortener/)
 
 **Basic Docs**
 
