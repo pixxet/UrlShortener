@@ -262,4 +262,8 @@ A feature is missing here? Feel free to create a pull request to solve it!
 I hope this has been useful and has helped you. If so, share it and recommend
 it! :)
 
-[@pixxettsme](https://twitter.com/pixxettsme)
+
+
+Credentials [@mremitsme](https://twitter.com/mremitsme)
+
+[@pixxetde](https://twitter.com/pixxetde)
